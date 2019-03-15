@@ -183,12 +183,9 @@ Now that you have some of the basics for creating a template and using template 
 
 We've built a web application, learned how to use templates, and added some interactive graphics. Now it's time to deploy! We'll be using Python Anywhere, but there are many options (AWS, Heroku, etc.) to host your site. Navigate to <http://www.pythonanywhere.com/login> to log in (or create an account, if needed).
 
-On the homepage, navigate to the __Web__ tab and select __"Add a new web app"__. We'll use the Flask setup (and we're running Python 3.6). Once the page loads, scroll down to the __Code__ section and select "Go to directory" for the _working directory_ - we'll come back to edit some of this information later.
+On the homepage, navigate to the __Web__ tab and select __"Add a new web app"__. We'll use the Flask setup (and we're running Python 3.6). Once the page loads, scroll down to the __Code__ section and select "Go to directory" for the _source directory_ - we'll come back to add files later.
 
-Since you can only upload files one at a time (unless you're connecting to something like GitHub), we'll zip our entire folder, upload it, and then unzip it. In your console, make sure you're in the directory _above_ `my_app`, then run `zip -r mysite.zip my_app`. Now, upload that zipped file to PythonAnywhere, and then click "Open Bash Console Here" at the top of the page. In _that_ console, run `unzip mysite.zip` (tedious, I know) and all your files should be stored on PythonAnywhere, in `/home/<username>/my_app`.
-
-Click the geometrical python-esq logo in the top left to return to your dashboard, then navigate to your web app page. Scroll to the __Code__ section once again, and click on the __WSGI configuration file__ link. Change:
-`project_home = u'/home/<username>/mysite'` to `project_home = u'/home/<username>/my_app'` (don't forget to save).
+Since you can only upload files one at a time (unless you're connecting to something like GitHub), we'll zip our entire folder, upload it, and then unzip it. In your Windows file manager, make sure you're in the `my_app` directory, then right-click `flask_app.py` and `app` and select "send to zipped folder" (named `mysite.zip`). Now, upload that zipped file to PythonAnywhere, and then click "Open Bash Console Here" at the top of the page. In _that_ console, run `unzip mysite.zip` (tedious, I know) and all your files should be stored on PythonAnywhere.
 
 Navigate to your web app page once again, reload your site, and then navigate to the url provided (usually <<username>.pythonanywhere.com>). Ta-da! Your site should be up and running, just as it was locally.
 	
@@ -227,7 +224,7 @@ def graphics(days):
     data = {"title":"Graphics", "heading":"Chart", "days":days, "div":div, "script":script}
     return render_template("graphics.html", data=data)
 ```
-Depending on your text editor, you may see errors pop up regarding the `create_bar_chart()` and `components()` functions. Before we can use these functions, we must import them. `Components` comes directly from Bokeh, but `create_bar_chart` is something we (Alex) created. #TODO: download the file, or copy and paste. Who knows?
+Depending on your text editor, you may see errors pop up regarding the `create_bar_chart()` and `components()` functions. Before we can use these functions, we must import them. `Components` comes directly from Bokeh, but `create_bar_chart` is something we (Alex) created. Copy and paste the file information into a new file (make sure it's in the `my_app` folder).
 
 #### Check point
 Before continuing, make sure that your directory has the following structure:
