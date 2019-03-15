@@ -139,7 +139,6 @@ def workshop():
             {"title":"Flask", "link":"https://github.com/epmarie/flask_example_app"}]
     data = {"title": "workshop", "heading": "Latest Workshops", "pubs":pubs}
     return render_template('workshop.html', data=data)
-)
 ```
 Try re-running your site now - see how each Workshop is its own element in the list? Jinja took the data we provided and inserted it into the template we created.
 
