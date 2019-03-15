@@ -192,6 +192,8 @@ Click the geometrical python-esq logo in the top left to return to your dashboar
 `project_home = u'/home/<username>/mysite'` to `project_home = u'/home/<username>/my_app'` (don't forget to save).
 
 Navigate to your web app page once again, reload your site, and then navigate to the url provided (usually <<username>.pythonanywhere.com>). Ta-da! Your site should be up and running, just as it was locally.
+	
+For further reference on deployment options with flask, visit <http://flask.pocoo.org/docs/1.0/deploying/>.
 
 ## Adding Interactive Bokeh Graphics
 Since we have our website up and funcitoning, let's take it a step further and add some interactive charts. To keep everything nice and isolated, we'll add a whole new page for this. Back in VSCode, start by adding a new route definition:
