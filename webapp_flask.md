@@ -40,7 +40,7 @@ Okay, the basics of our package are set! Now, back to our actual _application_. 
 $ cd ..
 $ touch flask_app.py
 ```
-Open that new file, add the line `from app import app`, and ta-da: your app is ready to go! Since we'll be running it locally, we'll want to run our application in __debug (development)__ mode. Tell Flask to run your application in a development environment by running `export FLASK_ENV=development`. Now, jump back over to your terminal and run `export FLASK_APP=flask_app.py` to tell Flask how to import your application. Then, run `flask run` - you should see something like this:
+Open that new file, add the line `from app import app`, and ta-da: your app is ready to go! Since we'll be running it locally, we'll want to run our application in __debug (development)__ mode. Tell Flask to run your application in a development environment by running `export FLASK_ENV=development` in your terminal. Now run `export FLASK_APP=flask_app.py` to tell Flask how to import your application. Then, run `flask run` - you should see something like this:
 ```
 [* Serving Flask app "app" (lazy loading)
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)]( * Serving Flask app "flask_app.py" (lazy loading)
